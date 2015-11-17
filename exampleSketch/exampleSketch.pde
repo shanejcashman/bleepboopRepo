@@ -33,14 +33,14 @@ void draw() {
   fill(0,191,255);
   stroke(20);
   box(150);
+  translate(-300, -300);
   
   michael();
   
 }
 
 void michael() {
-  translate(-300, -300);
   fill(0,191,255);
   textSize(32);
-  text("DOPE CUBE", 100, 100); 
+  text("DOPE CUBE", 220, 150); 
 }
