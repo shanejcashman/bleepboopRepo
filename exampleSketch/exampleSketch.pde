@@ -23,26 +23,24 @@ void draw() {
     posZ += 0.01;
   }
 
-  pushMatrix();
-  translate(130, height/2, 0);
-  rotateY(1.25);
-  rotateX(-0.4);
-  noStroke();
-  box(100);
-  popMatrix();
 
-  pushMatrix();
-  translate(500, height*0.35, -200);
-  noFill();
-  stroke(0);
-  sphere(280);
-  popMatrix();
-
-  background(10);
+ 
+  background(0);
   translate(300, 300);
   rotateY(posY);
   rotateX(pos);
   rotateZ(pos);
-  fill(250,180,0);
+  fill(0,191,255);
+  stroke(20);
   box(150);
+  translate(-300, -300);
+  
+  michael();
+  
+}
+
+void michael() {
+  fill(0,191,255);
+  textSize(32);
+  text("DOPE CUBE", 220, 150); 
 }
