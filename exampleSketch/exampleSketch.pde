@@ -1,5 +1,12 @@
 size(750, 500);
-ellipse (20,30,40,50);
 
+
+void draw(){
 
 background(240,180,0);
+
+
+fill(50);
+ellipse (350,250,40,40);
+
+}
