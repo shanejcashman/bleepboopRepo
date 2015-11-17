@@ -11,7 +11,7 @@ void setup(){
 void draw(){
   background(0);
   lights();
-  fill(150, 10, 35);
+  fill(240, 120, 0 );
   noStroke();
   
   if (mousePressed){
