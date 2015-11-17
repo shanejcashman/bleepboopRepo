@@ -48,31 +48,32 @@ void draw(){
   box(200);
   translate(-250, -250);
 
-  dopeCubeText();
+  dopeCubeText(120, 110);
+  dopeCubeText(120, 500);
 }
 
 
-void dopeCubeText() {
+void dopeCubeText(int x, int y) {
   fill(0,191,255);
   textSize(48);
   if (count < 10) {
-    text("D    C   ", 120, 110);
+    text("D    C   ", x, y);
   } else if (count < 20) {
-    text(" O    U  ", 120, 110);
+    text(" O    U  ", x, y);
   } else if (count < 30) {
-    text("  P    B ", 120, 110);
+    text("  P    B ", x, y);
   } else if (count < 40) {
-    text("   E    E", 120, 110);
+    text("   E    E", x, y);
   } else if (count < 50) {
-    text("DOPE CUBE", 120, 110);
+    text("DOPE CUBE", x, y);
   } else if (count < 80) {
     ;
   } else if (count < 100) {
-    text("DOPE CUBE", 120, 110);
+    text("DOPE CUBE", x, y);
   } else if (count < 120) {
     ;
   } else if (count < 179) {
-    text("DOPE CUBE", 120, 110);
+    text("DOPE CUBE", x, y);
   } else if (count > 180) {
     count = 0;
   }
