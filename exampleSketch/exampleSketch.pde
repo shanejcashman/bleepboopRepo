@@ -8,6 +8,6 @@ void setup(){
 
 
 void draw(){
-  background(255);
+  background(180, 240, 0);
   
 }
