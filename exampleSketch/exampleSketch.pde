@@ -7,7 +7,7 @@ PVector c2;
 
 
 void setup(){
-  size(500,500);
+  size(750,500);
   
 }
 
@@ -16,6 +16,7 @@ void draw(){
   ellipse (45,40, 40)
   background(180, 240, 0);
   
+
   rotVal+= speed;
 
 c1.x = mouseX+cos((rotVal/180)*PI)* radius;
@@ -39,3 +40,4 @@ if (mousePressed == true) {
   }
   
 }
+
