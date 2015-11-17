@@ -4,43 +4,44 @@ float posY;
 float posZ;
 float size;
 
-void setup() {
-  size(600, 600, P3D);
-  lights();
+void setup(){
+  size(500, 500, P3D);
 }
 
-void draw() {
-  if (mouseX > 180) {
-    posY -= 0.01;
-  } else if (mouseX < 180) {
-    posY += 0.01;
-
-    if (mouseY > 180) {
-      posZ -= 0.01;
-    }
-  }
-  if (mouseY < 180) {
-    posZ += 0.01;
-  }
-
-
- 
+void draw(){
   background(0);
-  translate(300, 300);
+  lights();
+  fill(150, 10, 35);
+  noStroke();
+  
+  if (mousePressed){
+  }
+  
+  if (mouseX > 180){
+    posY += 0.01;
+  } else { 
+    posY += 0;
+  }
+  if (mouseX < 300){
+    posY -= 0.01;
+  } else { 
+    posY += 0;
+  }
+  
+  if (mouseY > 180){
+    posZ -= 0.01;
+  }  else { 
+    posZ += 0;
+  }
+  if (mouseY < 300){
+    posZ += 0.01;
+  }  else { 
+    posZ += 0;
+  }
+  
+  translate(250, 250);
   rotateY(posY);
-  rotateX(pos);
+  rotateX(posZ);
   rotateZ(pos);
-  fill(0,191,255);
-  stroke(20);
-  box(150);
-  translate(-300, -300);
-  
-  michael();
-  
-}
-
-void michael() {
-  fill(0,191,255);
-  textSize(32);
-  text("DOPE CUBE", 220, 150); 
+  box(200);
 }
