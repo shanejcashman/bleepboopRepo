@@ -7,7 +7,7 @@ float size;
 int count;
 
 void setup(){
-  size(500, 500, P3D);
+  size(750, 750, P3D);
 }
 
 void draw(){
@@ -41,7 +41,7 @@ void draw(){
     posZ += 0;
   }
 
-  translate(250, 250);
+  translate(380, 380);
   rotateY(posY);
   rotateX(posZ);
   rotateZ(pos);
