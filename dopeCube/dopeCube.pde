@@ -6,12 +6,27 @@ float size;
 
 int count;
 
-Button button1 = new Button(80, 80, 40, 40);
+Button button1 = new Button(10, 10, 20, 20);
+Button button2 = new Button(40, 10, 20, 20);
+Button button3 = new Button(70, 10, 20, 20);
+Button button4 = new Button(100, 10, 20, 20);
+Button button5 = new Button(130, 10, 20, 20);
+Button button6 = new Button(160, 10, 20, 20);
 
 void setup(){
   size(750, 750, P3D);
   button1.buttonOnColor(255, 0, 0);
-  button1.buttonOffColor(0, 255, 0);
+  button1.buttonOffColor(120, 120, 120);
+  button2.buttonOnColor(255, 255, 0);
+  button2.buttonOffColor(120, 120, 120);
+  button3.buttonOnColor(0, 255, 0);
+  button3.buttonOffColor(120, 120, 120);
+  button4.buttonOnColor(0, 255, 255);
+  button4.buttonOffColor(120, 120, 120);
+  button5.buttonOnColor(0, 0, 255);
+  button5.buttonOffColor(120, 120, 120);
+  button6.buttonOnColor(255, 255, 255);
+  button6.buttonOffColor(120, 120, 120);
 }
 
 void draw(){
@@ -57,6 +72,11 @@ void draw(){
   popMatrix();
 
   button1.drawButton();
+  button2.drawButton();
+  button3.drawButton();
+  button4.drawButton();
+  button5.drawButton();
+  button6.drawButton();
 }
 
 
@@ -90,4 +110,9 @@ void dopeCubeText(int x, int y) {
 
 void mouseReleased() {
   button1.checkButtonState();
+  button2.checkButtonState();
+  button3.checkButtonState();
+  button4.checkButtonState();
+  button5.checkButtonState();
+  button6.checkButtonState();
 }
