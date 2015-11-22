@@ -61,6 +61,7 @@ void draw(){
 
   setCubeColor();
 
+  // push matrix that effects only the 3D cube
   pushMatrix();
   translate(380, 380);
   rotateX(posX);
@@ -68,8 +69,11 @@ void draw(){
   rotateZ(posZ);
   box(200);
   translate(-250, -250);
+
   dopeCubeText(120, 110);
   dopeCubeText(120, 500);
+
+  // pop the matrix
   popMatrix();
 
   button1.drawButton();
@@ -116,6 +120,7 @@ void dopeCubeText(int x, int y) {
   count ++;
 }
 
+// checks the states of the buttons an assignes an acording color
 void setCubeColor() {
   if (button1.state == true) {
     fill(240, 120, 0);

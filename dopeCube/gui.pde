@@ -15,6 +15,7 @@ class Button {
     height = h;
   }
 
+  // check if the mouse is over the button
   void checkButtonState() {
     if(mouseX < width + xPosition && mouseX > xPosition && mouseY < yPosition + height && mouseY > yPosition) {
       state = !state;
@@ -22,6 +23,7 @@ class Button {
     }
   }
 
+  // render the button
   void drawButton() {
     if (state) {
       fill(red, green, blue);
@@ -31,12 +33,14 @@ class Button {
     rect(xPosition, yPosition, width, height);
   }
 
+  // sets the color of the button when its on
   void buttonOnColor(int r, int g, int b) {
     red = r;
     green = g;
     blue = b;
   }
 
+  // sets the color of the button when its off
   void buttonOffColor(int r, int g, int b) {
     red2 = r;
     green2 = g;
