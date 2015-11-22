@@ -45,24 +45,18 @@ void draw(){
     posZ += 0;
   }
 
+  pushMatrix();
   translate(380, 380);
   rotateX(posX);
   rotateY(posY);
   rotateZ(posZ);
   box(200);
   translate(-250, -250);
-
   dopeCubeText(120, 110);
   dopeCubeText(120, 500);
+  popMatrix();
 
-
-  rotateX(posX - posX);
-  rotateY(posY - posY);
-  rotateX(posZ - posZ);
   button1.drawButton();
-  rotateX(posX);
-  rotateY(posY);
-  rotateZ(posZ);
 }
 
 
