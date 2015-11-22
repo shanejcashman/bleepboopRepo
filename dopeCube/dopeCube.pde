@@ -12,6 +12,7 @@ Button button3 = new Button(70, 10, 20, 20);
 Button button4 = new Button(100, 10, 20, 20);
 Button button5 = new Button(130, 10, 20, 20);
 Button button6 = new Button(160, 10, 20, 20);
+Button buttonFX1 = new Button(10, 40, 15, 15);
 
 void setup(){
   size(750, 750, P3D);
@@ -37,26 +38,16 @@ void draw(){
   if (mousePressed){
   }
 
-  if (mouseX > 180){
-    posY += 0.01;
-  } else {
-    posY += 0;
-  }
-  if (mouseX < 300){
-    posY -= 0.01;
-  } else {
-    posY += 0;
+  if (mouseX < 250){
+    posY -= 0.02;
+  } else if (mouseX > width - 250){
+    posY += 0.02;
   }
 
-  if (mouseY > 180){
-    posZ -= 0.01;
-  }  else {
-    posZ += 0;
-  }
-  if (mouseY < 300){
-    posZ += 0.01;
-  }  else {
-    posZ += 0;
+  if (mouseY < 250){
+    posX += 0.02;
+  } else if (mouseY > width - 250){
+    posX -= 0.02;
   }
 
   setCubeColor();
