@@ -6,7 +6,7 @@ float size;
 
 int count;
 
-Button button1 = new Button(40, 40, 40, 40);
+Button button1 = new Button(80, 80, 40, 40);
 
 void setup(){
   size(750, 750, P3D);

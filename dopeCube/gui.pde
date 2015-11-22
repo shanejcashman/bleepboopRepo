@@ -9,8 +9,8 @@ class Button {
   int red2, green2, blue2;
 
   Button(float xPos, float yPos, float w, float h) {
-    xPos = xPosition;
-    yPos = yPosition;
+    xPosition = xPos;
+    yPosition = yPos;
     width = w;
     height = h;
   }
