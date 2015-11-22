@@ -22,7 +22,6 @@ class Button {
     }
   }
 
-
   void drawButton() {
     if (state) {
       fill(red, green, blue);

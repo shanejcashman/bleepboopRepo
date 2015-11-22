@@ -15,7 +15,7 @@ Button button6 = new Button(160, 10, 20, 20);
 
 void setup(){
   size(750, 750, P3D);
-  button1.buttonOnColor(255, 0, 0);
+  button1.buttonOnColor(240, 120, 0);
   button1.buttonOffColor(120, 120, 120);
   button2.buttonOnColor(255, 255, 0);
   button2.buttonOffColor(120, 120, 120);
@@ -23,7 +23,7 @@ void setup(){
   button3.buttonOffColor(120, 120, 120);
   button4.buttonOnColor(0, 255, 255);
   button4.buttonOffColor(120, 120, 120);
-  button5.buttonOnColor(0, 0, 255);
+  button5.buttonOnColor(30, 30, 200);
   button5.buttonOffColor(120, 120, 120);
   button6.buttonOnColor(255, 255, 255);
   button6.buttonOffColor(120, 120, 120);
@@ -32,7 +32,6 @@ void setup(){
 void draw(){
   background(0);
   lights();
-  fill(240, 120, 0 );
   noStroke();
 
   if (mousePressed){
@@ -60,6 +59,8 @@ void draw(){
     posZ += 0;
   }
 
+  setCubeColor();
+
   pushMatrix();
   translate(380, 380);
   rotateX(posX);
@@ -79,6 +80,14 @@ void draw(){
   button6.drawButton();
 }
 
+void mouseReleased() {
+  button1.checkButtonState();
+  button2.checkButtonState();
+  button3.checkButtonState();
+  button4.checkButtonState();
+  button5.checkButtonState();
+  button6.checkButtonState();
+}
 
 void dopeCubeText(int x, int y) {
   fill(0,191,255);
@@ -104,15 +113,21 @@ void dopeCubeText(int x, int y) {
   } else if (count > 180) {
     count = 0;
   }
-
   count ++;
 }
 
-void mouseReleased() {
-  button1.checkButtonState();
-  button2.checkButtonState();
-  button3.checkButtonState();
-  button4.checkButtonState();
-  button5.checkButtonState();
-  button6.checkButtonState();
+void setCubeColor() {
+  if (button1.state == true) {
+    fill(240, 120, 0);
+  } else if (button2.state == true) {
+    fill(255, 255, 0);
+  } else if (button3.state == true) {
+    fill(0, 255, 0);
+  } else if (button4.state == true) {
+    fill(0, 255, 255);
+  } else if (button5.state == true) {
+    fill(0, 0, 255);
+  } else if (button6.state == true) {
+    fill(255, 255, 255);
+  }
 }
