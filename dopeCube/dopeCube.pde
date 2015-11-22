@@ -7,14 +7,11 @@ float size;
 int count;
 
 Button button1 = new Button(40, 40, 40, 40);
-Button button2 = new Button(90, 40, 40, 40);
 
 void setup(){
   size(750, 750, P3D);
   button1.buttonOnColor(255, 0, 0);
   button1.buttonOffColor(0, 255, 0);
-  button2.buttonOnColor(255, 255, 0);
-  button2.buttonOffColor(0, 255, 255);
 }
 
 void draw(){
@@ -59,13 +56,10 @@ void draw(){
   dopeCubeText(120, 500);
 
 
-  rotateX(0);
-  rotateY(0);
-  rotateX(0);
-  button1.checkButtonState();
+  rotateX(posX - posX);
+  rotateY(posY - posY);
+  rotateX(posZ - posZ);
   button1.drawButton();
-  button2.checkButtonState();
-  button2.drawButton();
   rotateX(posX);
   rotateY(posY);
   rotateZ(posZ);
@@ -98,4 +92,8 @@ void dopeCubeText(int x, int y) {
   }
 
   count ++;
+}
+
+void mouseReleased() {
+  button1.checkButtonState();
 }

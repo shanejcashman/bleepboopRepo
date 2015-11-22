@@ -17,15 +17,11 @@ class Button {
 
   void checkButtonState() {
     if(mouseX < width + xPosition && mouseX > xPosition && mouseY < yPosition + height && mouseY > yPosition) {
-      hover = true;
+      state = !state;
+      println("Yay!");
     }
   }
 
-  void mouseReleased() {
-    if (hover == true ) {
-      state = !state;
-    }
-  }
 
   void drawButton() {
     if (state) {
